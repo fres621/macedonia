@@ -1,0 +1,10 @@
+const cp = require('child_process');
+cp.execSync('build.bat');
+const H = cp.execSync('cd build && main-rs');
+const e = cp.execSync('java Main.java');
+const l = cp.execSync('python main.py');
+const o = cp.execSync('lua main.lua');
+const W = cp.execSync('cd build && main-c');
+const r = cp.execSync('chcp 437 > nul & powershell -file main.ps1');
+const d = cp.execSync('cscript //NoLogo Program.vbs');
+console.log([H, e, l, l, o, ' ', W, o, r, l, d].join(''));
